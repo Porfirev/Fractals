@@ -1,0 +1,44 @@
+﻿<Window x:Class="Fractal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fractal"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize" WindowStyle="ThreeDBorderWindow">
+    <Grid x:Name="Grid" RenderTransformOrigin="0.513,0.522">
+        <Grid x:Name="paramGrid">
+            <ScrollBar x:Name="leftSizeScrollBar" HorizontalAlignment="Left" Margin="50,67,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.738,0.673" Scroll="LeftSizeScrollBar_Scroll"/>
+            <TextBox x:Name="leftSize" HorizontalAlignment="Left" Margin="13,67,0,0" Text="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="37" Height="33" TextChanged="LeftSize_TextChanged"/>
+            <Label Content="Отношение длинны основания к левой ветке" HorizontalAlignment="Left" Margin="72,71,0,0" VerticalAlignment="Top" Width="385"/>
+            <ScrollBar x:Name="rightSizeScrollBar" HorizontalAlignment="Left" Margin="50,107,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.738,0.673" Scroll="RightSizeScrollBar_Scroll"/>
+            <TextBox x:Name="rightSize" HorizontalAlignment="Left" Margin="13,107,0,0" Text="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="37" Height="33" TextChanged="RightSize_TextChanged"/>
+            <Label Content="Отношение длинны основания к правой ветке" HorizontalAlignment="Left" Margin="72,111,0,0" VerticalAlignment="Top" Width="385"/>
+            <ScrollBar x:Name="leftAngleSizeScrollBar" HorizontalAlignment="Left" Margin="50,147,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.738,0.673" Scroll="LeftAngleSizeScrollBar_Scroll"/>
+            <TextBox x:Name="leftAngle" HorizontalAlignment="Left" Margin="13,147,0,0" Text="45" TextWrapping="Wrap" VerticalAlignment="Top" Width="37" Height="33" TextChanged="LeftAngle_TextChanged"/>
+            <Label Content="Угол между продолжением основания и левой веткой(в градусах)" HorizontalAlignment="Left" Margin="72,151,0,0" VerticalAlignment="Top" Width="385"/>
+            <ScrollBar x:Name="rightAngleSizeScrollBar" HorizontalAlignment="Left" Margin="50,187,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.738,0.673" Scroll="RightAngleSizeScrollBar_Scroll"/>
+            <TextBox x:Name="rightAngle" HorizontalAlignment="Left" Margin="13,187,0,0" Text="45" TextWrapping="Wrap" VerticalAlignment="Top" Width="37" Height="33" TextChanged="RightAngle_TextChanged"/>
+            <Label Content="Угол между продолжением основания и правой веткой(в градусах)" HorizontalAlignment="Left" Margin="72,191,0,0" VerticalAlignment="Top" Width="385"/>
+            <Label Content="Параметры Пифагорова дерева" HorizontalAlignment="Left" Margin="15,22,0,0" VerticalAlignment="Top" Width="385"/>
+            <Label Content="Параметры Множества Кантора" HorizontalAlignment="Left" Margin="15,240,0,0" VerticalAlignment="Top" Width="385"/>
+            <ScrollBar x:Name="intervalScrollBar" HorizontalAlignment="Left" Margin="50,267,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.738,0.673" Scroll="IntervalScrollBar_Scroll"/>
+            <TextBox x:Name="interval" HorizontalAlignment="Left" Margin="13,267,0,0" Text="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="37" Height="33" TextChanged="Interval_TextChanged"/>
+            <Label Content="Интервал между итерациями(в пикселях)" HorizontalAlignment="Left" Margin="72,271,0,0" VerticalAlignment="Top" Width="385"/>
+            <ComboBox x:Name="funnyBalls" HorizontalAlignment="Left" Margin="13,340,0,0" VerticalAlignment="Top" Width="148" SelectionChanged="FunnyBalls_SelectionChanged"/>
+            <Label Content="Смешарики" HorizontalAlignment="Left" Margin="13,310,0,0" VerticalAlignment="Top" Width="385"/>
+            <Button x:Name="readMeParams" Content="README" HorizontalAlignment="Left" Margin="680,8,0,0" VerticalAlignment="Top" Width="98" Click="ReadMe_Click"/>
+            <Button x:Name="closeParams" Content="Закрыть параметры" HorizontalAlignment="Left" Margin="650,355,0,0" VerticalAlignment="Top" Height="51" Width="131" RenderTransformOrigin="0.485,0.461" Click="CloseParams_Click"/>
+        </Grid>
+        <Grid x:Name="myGrid" Margin="0,0,0,-1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <ComboBox x:Name="fractals" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Width="182" SelectionChanged="Fractals_SelectionChanged"/>
+            <ComboBox x:Name="depths" HorizontalAlignment="Left" Margin="10,117,0,0" VerticalAlignment="Top" Width="60" SelectionChanged="Depths_SelectionChanged"/>
+            <Label Content="Выберите Фрактал" HorizontalAlignment="Left" Margin="14,14,0,0" VerticalAlignment="Top" Width="112"/>
+            <Label Content="Установите глубину" HorizontalAlignment="Left" Margin="14,91,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.496,0.732"/>
+            <Button x:Name="parameter" Content="Параметры" HorizontalAlignment="Left" Margin="650,355,0,0" VerticalAlignment="Top" Height="51" Width="131" Click="Parameter_Click"/>
+            <Button x:Name="redraw" Content="Перерисовать" HorizontalAlignment="Left" Margin="10,384,0,0" VerticalAlignment="Top" Height="22" Width="98" Click="Redraw_Click"/>
+            <Image x:Name="funnyBall" HorizontalAlignment="Left" Height="100" Margin="14,163,0,0" VerticalAlignment="Top" Width="100"/>
+            <Button x:Name="readMe" Content="README" HorizontalAlignment="Left" Margin="680,8,0,0" VerticalAlignment="Top" Width="98" Click="ReadMe_Click"/>
+        </Grid>
+    </Grid>
+</Window>
